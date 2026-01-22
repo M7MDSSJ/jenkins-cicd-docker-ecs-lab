@@ -3,7 +3,7 @@
 This guide explains how to create and configure the **AWS Elastic Container Registry (ECR)** repository used in the pipeline to store Docker images.  
 The pipeline pushes images to a private repository named `app-rg` (you can change the name if needed).
 
-![Jenkins Pipeline Stages](./screenshots/jenkins-stages.png)
+![ECR-repo](./screenshots/ECR-repo.png)
 
 The Jenkinsfile references these ECR details:
 
