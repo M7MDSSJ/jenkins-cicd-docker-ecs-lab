@@ -71,4 +71,8 @@ After the image is in ECR, it is ready to be deployed to **AWS ECS** (manual ste
 
 All scripts and the Jenkinsfile are in the `scripts/` folder.
 
+**⚠️ Disclaimer**: This project is based on the "Decoding DevOps – From Basics to Advanced Projects with AI" course on Udemy.  
+You can find the course here: [Decoding DevOps – From Basics to Advanced Projects with AI](https://www.udemy.com/course/decodingdevops/?couponCode=KEEPLEARNINGOCTA)  
+The original source code used in this lab comes from: [vprofile-project](https://github.com/hkhcoder/vprofile-project)
+
 Happy building & deploying containers! 🚀
