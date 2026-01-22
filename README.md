@@ -1,10 +1,10 @@
-# Jenkins CI/CD Pipeline with Docker, ECR & ECS (Lab)
+# jenkins-cicd-docker-ecs-lab
 
 ![Architecture Diagram](./screenshots/architecture-diagram.png)
 
 ## Overview
 
-This lab shows a realistic **CI/CD pipeline** for a Java web application using containerization and AWS services.
+This lab demonstrates a realistic **CI/CD pipeline** for a Java web application using containerization and AWS services.
 
 The pipeline automatically:
 
@@ -14,7 +14,7 @@ The pipeline automatically:
 - Pushes the image to **AWS ECR**
 - Notifies the team via Slack
 
-After the image is in ECR, it is ready to be deployed to **AWS ECS** (manual or separate automated step).
+After the image is in ECR, it is ready to be deployed to **AWS ECS** (manual step or separate automated CD trigger).
 
 ### Workflow
 
@@ -26,7 +26,7 @@ After the image is in ECR, it is ready to be deployed to **AWS ECS** (manual or 
 6. Builds the WAR artifact
 7. Performs **SonarQube** analysis + enforces Quality Gate
 8. Builds multi-stage **Docker** image
-9. Logs in to **AWS ECR** and pushes the image (build number + `latest` tags)
+9. Authenticates to **AWS ECR** and pushes the image (build number + `latest` tags)
 10. Sends **Slack** notification (success / failure)
 
 **Deployment to ECS** is prepared but **not automated** in this pipeline (typical pattern: separate CD trigger, blue/green deployment, or GitOps).
@@ -58,7 +58,7 @@ After the image is in ECR, it is ready to be deployed to **AWS ECS** (manual or 
   - ECR (create repository, push images)
   - ECS (cluster, task definition, service)
   - IAM (user/role with ECR + ECS access)
-- AWS CLI & Docker installed on Jenkins VM (handled in provisioning + post-steps)
+- Docker installed and Jenkins user added to docker group (handled in provisioning + post-steps)
 
 ### Quick Start
 
