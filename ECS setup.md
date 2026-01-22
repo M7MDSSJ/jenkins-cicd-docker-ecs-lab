@@ -11,7 +11,7 @@ This guide walks you through creating a basic **AWS ECS** (Elastic Container Ser
 5. Leave other settings default
 6. Click **Create**
 
-![ECS Cluster Overview](./screenshots/ecs-deployment.png)
+![ECS Cluster Overview](./screenshots/ECS-deployment.png)
 
 ### 2. Create Task Definition
 
@@ -40,7 +40,7 @@ This guide walks you through creating a basic **AWS ECS** (Elastic Container Ser
 
 4. Click **Create**
 
-![ECS Task Definition](./screenshots/ecs-task-definition.png)
+![ECS Task Definition](./screenshots/ECS-task-definition.png)
 
 **IAM Role Requirement**:
 - Attach `CloudWatchLogsFullAccess` or minimal logging policy to the Task Execution Role
@@ -61,7 +61,7 @@ This guide walks you through creating a basic **AWS ECS** (Elastic Container Ser
 7. Load balancing: Skip for now (add Application Load Balancer later if needed)
 8. Click **Create Service**
 
-![ECS Service Running](./screenshots/ecs-task-service.png)
+![ECS Service Running](./screenshots/ECS-task-service.png)
 
 ### Verification
 
